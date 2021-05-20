@@ -52,19 +52,36 @@
 // for (var i = 0; i < 5; i++) {
 //    console.log("I am " + i);
 // }
+
+// Data-Driven Documents (D3 for short) is a JavaScript 
+// library that adds interactive functionality, such as 
+// when users click a button to filter a table. It works 
+// by "listening" for events, such as a button click, 
+// then reacts according to the code we've created.
+
+// // if-statement syntax
+// if ( condition ) { code to execute }
+
+// // pseudocode practice
+// if (a date is entered) {
+//     Filter the default data to show only the date entered
+// };
+
+// if (date) {
+//     filteredData = filteredData.filter(row => row.datetime === date);
+// };
+
 // -----------------------------------------------------------------------------------------------------
 // ABOVE: Module notes
 // -----------------------------------------------------------------------------------------------------
 // BELOW: Module work
 // -----------------------------------------------------------------------------------------------------
 
+// import the data from data.js 
+const tableData = data;
 
-// // BELOW BUILT DURING MODULE
-// // import the data from data.js 
-// const tableData = data;
-
-// // Reference the HTML table using d3 
-// var tbody = d3.select("tbody");
+// Reference the HTML table using d3 
+var tbody = d3.select("tbody");
 
 // // Create new function
 // function buildTable(data) {
@@ -100,5 +117,43 @@ function buildTable(data) {
       );
     });
   }
-  
 
+// // Filtering function
+// // Named 'handle click' because it will be handling what to do after
+// // an input is given, such as filtering the table by date
+
+// function handleClick() {
+//     let date = d3.select("#datetime").property("value");
+//     let filteredData = tableData;
+
+// // Check for a date filter using an if statement
+
+//     if (date) {
+//         filteredData = filteredData.filter(row => row.datetime === date);
+//     };
+
+//     buildTable(filteredData);
+// };
+
+// Module version with comments:
+
+function handleClick() {
+    // Grab the datetime value from the filter
+    let date = d3.select("#datetime").property("value");
+    let filteredData = tableData;
+  
+     // Check to see if a date was entered and filter the
+    // data using that date.
+    if (date) {
+      // Apply `filter` to the table data to only keep the
+      // rows where the `datetime` value matches the filter value
+      filteredData = filteredData.filter(row => row.datetime === date);
+    };
+  
+     // Rebuild the table using the filtered data
+    // @NOTE: If no date was entered, then filteredData will
+    // just be the original tableData.
+    buildTable(filteredData);
+  };
+
+  
