@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
 
     <!-- Components stored in body -->
 
@@ -30,7 +30,7 @@
     <!-- Also specifies styling in our stylesheet -->
 
         <!-- Navigation bar, incl functionality to reset table filters -->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <!-- navbar = fits across top of page; navbar-expand-lg is screen size responsiveness -->
         
             <!-- Add functionality to navbar.
@@ -47,7 +47,7 @@
 
         <!-- Add the Jumbotron -->
         <div class="jumbotron">
-            <h1>The Truth Is Out There</h1>
+            <h1 class="display-4">The Truth Is Out There</h1>
         </div>
 
         <!-- Grid system: containers, rows, columns -->
@@ -91,7 +91,7 @@
                 <div class="col-md-3">
 
                     <!-- User input form -->
-                    <form>
+                    <form class="bg-dark">
 
                         <!-- Form name -->
                         <p>Filter Search</p>
@@ -99,10 +99,10 @@
                         <!-- Add input box and button (created JS: #filter-btn) -->
                        
                        <!-- Unordered list -->
-                        <ul class="list-group">
+                        <ul class="list-group bg-dark">
                             
                             <!-- List items: input (date) and button -->
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-dark">
 
                                 <!-- Date input field 
                                 Includes two new HTML components:
@@ -119,7 +119,7 @@
                             <li class="list-group-item">
 
                                 <!-- Button -->
-                                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                                <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button>
 
                             </li>
 
@@ -130,6 +130,8 @@
                 </div>
 
                 <div class="col-md-9">
+
+                    <!-- Table -->
 
                     <table class="table table-striped">
 
@@ -149,6 +151,8 @@
 
                         </thead>
 
+                        <tbody></tbody>
+
                     </table>
 
                 </div>
@@ -157,9 +161,18 @@
 
         </div>
 
-
-
     </div>
+
+    <!-- Scripts to connect D3.js, data.js, and app.js -->
+
+    <!-- 1. A link to a D3.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    
+    <!-- 2. The file path to data.js -->
+    <script src="static/js/data.js"></script>
+    
+    <!-- 3. The file path to app.js -->
+    <script src="static/js/app.js"></script>
 
 </body>
 

@@ -1,0 +1,28 @@
+/*
+
+CSS Syntax
+
+1. Area of customization is set, identified by element, class attribute, or id attribute 
+2. Colon
+3. Customization value
+4. Semicolon
+
+*/
+
+/* -------------------------------------------------------------------------------------- */
+/* CODE */
+
+/* Apply light font color to webpage */
+body {
+
+    color: #f7f7f7;
+}
+/* If we were to replace "body" above with "h1," only h1 elements would be affected */
+
+/* Style the Jumbotron */
+.jumbotron {
+    background-image: url("/Users/crkaide/OneDrive - IL State University/Vanderbilt/Vanderbilt/Assignments/11_UFO_Sightings_with_JavaScript/UFOs/static/images/nasa.jpeg");
+    background-size: 100% 100%;
+    text-align: center;
+  }
+
