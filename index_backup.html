@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFO Finder</title>
+    
+    <!-- Link to Bootstrap's content delivery network (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+
+<body class="bg-dark">
+
+    <!-- Components stored in body -->
+
+    <div class="wrapper"> 
+    <!-- Wrapper class adds functionality to Bootstrap -->
+    <!-- Helps group elements (title, paragraph, table, filters) -->
+    <!-- Also specifies styling in our stylesheet -->
+
+        <!-- Navigation bar, incl functionality to reset table filters -->
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <!-- navbar = fits across top of page; navbar-expand-lg is screen size responsiveness -->
+        
+            <!-- Add functionality to navbar.
+            Usually redirects, this time resets after table is filtered.
+            Accomplished by linking to the homepage, index.html -->
+            <a class="navbar-brand" href="index.html">UFO Sightings</a>
+            <!-- navbar-brand is a built-in style from
+            Bootstrap that provides padding and font
+            sizing to the element by default -->
+
+
+
+        </nav>
+
+        <!-- Add the Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="display-4">The Truth Is Out There</h1>
+        </div>
+
+        <!-- Grid system: containers, rows, columns -->
+
+        <!-- Create container (resizes to span width of viewport)-->
+        <div class="container-fluid">
+
+            <!-- "row" class ensures title and paragraph align neatly -->
+            <div class="row">
+
+                <!-- Add columns -->
+                
+                <!-- Column 1, spans 4 -->
+                <div class="col-md-4">
+                    <h3>UFO Sightings - Are They for Real? <small>Ufologists Weigh In</small></h3>
+                </div>
+
+                <!-- Column 2, spans 8 -->
+                <div class="col-md-8">
+                    <p>
+                        Are we alone in the universe? For millennia, humans have turned to the sky to answer this question. Now, thanks to research generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis.
+
+                        "The release of this analysis is well-timed: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be especially helpful in both cataloguing sightings—which is hugely helpful for us in our search for aliens—and in helping us celebrate the work that has already been done, such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"
+                        
+                        Not everyone is ready to celebrate, however. Local CEO and vocal anti-alien activist V. Isualize reached out to our reporters to go on record as firmly opposed to any attempts to provide access to this data. "If there are aliens, they certainly would like to be left alone," she stated, before directing us to the Leave Aliens Alone (LAA) community engagement initiative she founded and funds.
+                        
+                        So what do YOU think? Are we alone in the universe? Are aliens trying to contact us, or do they want to be left alone? Dig through the data yourself, and let us know what you see.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Create container for filter section and table -->
+        <!-- Accepting user input here, using HTML-specific field: "form" -->
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <!-- User input form -->
+                    <form class="bg-dark">
+
+                        <!-- Form name -->
+                        <p>Filter Search</p>
+
+                        <!-- Add input box and button (created JS: #filter-btn) -->
+                       
+                       <!-- Unordered list -->
+                        <ul class="list-group bg-dark">
+                            
+                            <!-- List items: input (date) and button -->
+                            <li class="list-group-item bg-dark">
+
+                                <!-- Date input field 
+                                Includes two new HTML components:
+                                label (user prompt) and input field-->
+
+                                <!-- Label/caption -->
+                                <label for="date">Enter Date</label>
+
+                                <!-- Input field -->
+                                <input type="text" placeholder="1/10/2010" id="datetime" />
+
+                            </li>
+
+                            <li class="list-group-item">
+
+                                <!-- Button -->
+                                <button id="filter-btn" type="button" class="btn btn-dark">Filter Table</button>
+
+                            </li>
+
+                        </ul>
+
+                    </form>
+
+                </div>
+
+                <div class="col-md-9">
+
+                    <!-- Table -->
+
+                    <table class="table table-striped">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Date</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Country</th>
+                                <th>Shape</th>
+                                <th>Duration</th>
+                                <th>Comments</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts to connect D3.js, data.js, and app.js -->
+
+    <!-- 1. A link to a D3.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    
+    <!-- 2. The file path to data.js -->
+    <script src="static/js/data.js"></script>
+    
+    <!-- 3. The file path to app.js -->
+    <script src="static/js/app.js"></script>
+
+</body>
+
+</html>
