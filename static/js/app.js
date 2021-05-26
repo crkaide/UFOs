@@ -24,7 +24,13 @@ function buildTable(data) {
 }
 
 // 1. Create a variable to keep track of all the filters as an object.
- var filters = {};
+// FUNDAMENTALLY IMPORTANT to set it up as below.
+// Even an empty argument in the middle breaks it.
+ var filters = {
+  
+ };
+
+// MODULE HINT
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
@@ -54,11 +60,10 @@ function updateFilters() {
   
   }
 
-
-
-
-
-
+// *** NESTED function below = hangup.
+// Code works with indents.  Indents
+// should not matter (??) but seemed to 
+// break step 7.
 
 
       // 7. Use this function to filter the table when data is entered.
@@ -69,9 +74,11 @@ function updateFilters() {
 
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    Object.entries(filters).forEach(([filterID, elementValue]) => {
-      filteredData = filteredData.filter(row => row[filterID] === elementValue);
-    });
+        Object.entries(filters).forEach(([filterID, elementValue]) => {
+          filteredData = filteredData.filter(row => row[filterID] === elementValue);
+        }
+        )
+        ;
 
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredData);
@@ -86,31 +93,4 @@ function updateFilters() {
   buildTable(tableData);
 
 
-
-
-
-
-
-
-
-
-
-  // // 7. Use this function to filter the table when data is entered.
-  // function filterTable() {
-
-  //   // 8. Set the filtered data to the tableData.
-
-  //   let filteredData = tableData;
-  
-  //   // 9. Loop through all of the filters and keep any data that
-  //   // matches the filter values
-  //   Object.entries(filters).forEach(([filterId, elementValue]) => {
-  //     filteredData = filteredData.filter(row => row[filterID] === elementValue);
-  //   });
-    
-  //   // 10. Finally, rebuild the table using the filtered data
-  //   buildTable(filteredData);
-  
-  // }
-  
-  
+//
