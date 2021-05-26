@@ -10,7 +10,7 @@ Primary development focused on Javascript coding and site layout.  Once the init
 There are four primary HTML components to this webpage:
 
 ### 1) *Page header ("UFO Sightings") & title*
-_The Jumbotron title, while nonfunctional for the user, is the boldest branding of this page.  The page header in the upper right is marginally functional insofar as it reloads the table below as needed (a function also performed by clearing the filters and pressing "Enter" on the keyboard).  While Bootstrap (primarily) allowed formatting that's preferable to raw HTML, the banner image allows an opportunity for add'l functionality if the client desires (e.g., clickable link to Google "UFO" news search results)._
+_The Jumbotron title, while nonfunctional for the user, is the boldest branding of this page.  The page header in the upper left is marginally functional insofar as it reloads the table below as needed (a function also performed by clearing the filters and pressing "Enter" on the keyboard).  While Bootstrap (primarily) allowed formatting that's preferable to raw HTML, the banner image allows an opportunity for add'l functionality if the client desires (e.g., clickable link to Google "UFO" news search results)._
 
   ![1_page_header.png](https://github.com/crkaide/UFOs/blob/main/README_md_files/1_page_header.png?raw=true)
 
